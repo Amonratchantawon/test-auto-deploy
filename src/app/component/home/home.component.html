@@ -1,0 +1,32 @@
+<br>
+<div class="container text-center">
+    <div class="row align-items-start">
+        <div class="col">
+        </div>
+        <div class="col">
+            <input #myTd type="text" (keyup)="keyup()" [(ngModel)]="searchTxt" (change)="onChangeEvent($event)" (focus)="focus()" (focusout)="focusout()" class="form-control">
+            <ng-container *ngIf="options.length">
+                    <div class="list-group shadow-sm" style="margin-top: 10px; position: absolute;" [ngStyle]="{'width': (myTd.offsetWidth) +'px'}">
+                        <ng-container *ngFor="let itm of options">
+                            <a class="list-group-item list-group-item-action" (click)="selectItem(itm)">{{itm?.name}}</a>
+                        </ng-container>
+                    </div>
+            </ng-container>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<div class="information">
+    <a href="">
+        Enaluate COVID-19 symptoms and understand next steps
+    </a>
+</div>
+
+<div class="information information-2">
+    <a href="">Shop online </a> and fet free, on-contact delivery, Specialist help and more.
+</div>
+
+
+
+
